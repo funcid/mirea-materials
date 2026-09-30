@@ -4,7 +4,7 @@
 
 ## Курсы
 
-### [java-course](java-course/)
+### [java-course](java-course/) — 2 курс бакалавриата, «Информационные системы в бизнесе»
 
 Gradle-монорепозиторий практикума Java (Java 21).
 

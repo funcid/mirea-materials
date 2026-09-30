@@ -1,5 +1,7 @@
 package ru.mirea.java.lesson01;
 
+import java.util.Scanner;
+
 /**
  * Обязательно пройти:
  * <ul>
@@ -14,6 +16,30 @@ package ru.mirea.java.lesson01;
  */
 public final class Main {
   public static void main(String[] args) {
-    System.out.println("Основные языковые конструкции Java");
+    Scanner in = new Scanner(System.in);
+
+    System.out.print("Число: ");
+    double x = in.nextDouble();
+
+    System.out.print("Операция (+ - * /): ");
+    String op = in.next();
+
+    System.out.print("Число: ");
+    double y = in.nextDouble();
+
+    double result;
+    if (op.equals("+")) {
+      result = x + y;
+    } else if (op.equals("-")) {
+      result = x - y;
+    } else if (op.equals("*")) {
+      result = x * y;
+    } else if (op.equals("/")) {
+      result = x / y;
+    } else {
+      System.out.println("Неизвестная операция");
+      return;
+    }
+    System.out.println("Результат: " + result);
   }
 }

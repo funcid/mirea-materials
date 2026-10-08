@@ -17,7 +17,7 @@
 | --- | --- |
 | `01-language-constructs` | Языковые конструкции: примитивы, `String`, `Math`, `if`/`for`, ввод-вывод. Задание — консольный калькулятор `+ - * /` (`double`) |
 | `02-oop` | Массивы: binary search, квадраты по убыванию (два указателя), склейка интервалов (sliding window) |
-| `03-classes` | Классы, интерфейсы, контракты: `Account`, `Enrollment`/`Withdrawal`, `AccountService` / `AccountUseCase`. Начисление готово, списание — задание; затем ошибки и `CryptoAccountUseCase` |
+| `03-classes` | Классы, интерфейсы, контракты: `ru.mirea.java.lesson03.Account`, `Enrollment`/`Withdrawal`, `AccountService` / `AccountUseCase`. Начисление готово, списание — задание; затем ошибки и `CryptoAccountUseCase` |
 | `04-interfaces-exceptions` | Интерфейсы. Исключения. Отладка |
 | `05-collections` | Коллекции |
 | `06-io-concurrency` | Ввод-вывод. Многопоточность |

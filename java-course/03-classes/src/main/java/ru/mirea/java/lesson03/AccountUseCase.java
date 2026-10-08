@@ -1,17 +1,14 @@
 package ru.mirea.java.lesson03;
 
-/** Обычная банковская реализация контракта {@link AccountService}. */
-public class AccountUseCase implements AccountService {
+import java.math.BigDecimal;
 
-  @Override
-  public Account enrollment(Enrollment enrollment) {
-    Account account = enrollment.account();
-    return new Account(account.id(), account.balance() + enrollment.amount());
-  }
+// контракты
+public interface AccountUseCase {
 
-  @Override
-  public Account withdrawal(Withdrawal withdrawal) {
-    // TODO: реализуйте списание по аналогии с enrollment
-    throw new UnsupportedOperationException("реализуйте списание");
-  }
+    // зачисление
+    // сигнатура
+    void enroll(Account account, BigDecimal amount);
+
+    // списание
+    void withdraw(Account account, BigDecimal amount);
 }

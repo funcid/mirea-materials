@@ -1,30 +1,21 @@
 package ru.mirea.java.lesson03;
 
-/**
- * Занятие 3. Классы, интерфейсы, методы и контракты.
- *
- * <p>Модель как в банковском сервисе: счёт, команды начисления/списания,
- * контракт {@link AccountService} и его реализация {@link AccountUseCase}.
- */
+import java.math.BigDecimal;
+
 public class Main {
-  public static void main(String[] args) {
-    AccountService service = new AccountUseCase();
+    public static void main(String[] args) {
+        Account account = new Account(
+                "4080 3898 9928 4277",
+                new BigDecimal("13")
+        );
 
-    Account account = new Account("A-1", 1000.0);
-    System.out.println("старт: " + account);
+        // SOLID: L: Liskov Principle
+        AccountUseCase useCase = new CommissiomUseCaseImpl(
+                new BigDecimal("0.3")
+        );
 
-    account = service.enrollment(new Enrollment(account, 250.0));
-    System.out.println("начисление: " + account);
+        useCase.withdraw(account, BigDecimal.TEN);
 
-    // Задание 1: реализуйте withdrawal
-    // account = service.withdrawal(new Withdrawal(account, 100.0));
-    // System.out.println("списание: " + account);
-
-    // Задание 2: ошибки
-
-    // Задание 3: другая реализация комиссия
-    // AccountService crypto = new CryptoAccountUseCase(0.01);
-    // account = crypto.enrollment(new Enrollment(account, 50.0));
-    // System.out.println("crypto: " + account);
-  }
+        System.out.println(account.balance);
+    }
 }

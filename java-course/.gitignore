@@ -39,3 +39,6 @@ out/
 ### OS ###
 .DS_Store
 Thumbs.db
+
+### Exam server (local / VPS only — not for students) ###
+teacher/control2-server/
